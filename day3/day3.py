@@ -12,8 +12,7 @@ def part1(input, slope):
         col += slope[0]
         row += slope[1]
 
-        if col >= col_max:
-            col -= col_max
+        col %= col_max
 
         if row > bottom:
             row = bottom
@@ -27,7 +26,6 @@ def part1(input, slope):
 def part2(input, slopes):
     total = 1
     for slope in slopes:
-        print(slope)
         total *= part1(input, slope)
     return total
 
