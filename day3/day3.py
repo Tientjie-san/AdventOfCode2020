@@ -32,7 +32,6 @@ def part2(input, slopes):
     return total
 
 
-
 input_file = open('input.txt', "r")  # opens the file in read mode
 input = [list(line) for line in input_file.read().splitlines()]
 input_file.close()
