@@ -7,12 +7,7 @@ def part1(required, optional):
     while line:
         line = input_file.readline()
 
-        if not line:
-            if is_valid(passport, required, optional):
-                count += 1
-            break
-
-        if line == '\n':
+        if line == '\n' or not line:
             if is_valid(passport, required, optional):
                 count += 1
 
